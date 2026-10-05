@@ -1,0 +1,47 @@
+{
+  "seed": 42,
+  "threshold": 0.5,
+  "hyperparameters": "fixed before test evaluation; no tuning",
+  "models": {
+    "logistic_regression": {
+      "seconds": 0.048451003998707165,
+      "train_rows": 18000,
+      "artifact_sha256": "477c2c30a904adab5f2ec149a768af68fb5f1740a0da541ca8d4c102ac760f66"
+    },
+    "random_forest": {
+      "seconds": 1.3351898000000801,
+      "train_rows": 18000,
+      "artifact_sha256": "8097422902cb79d1f06be9e3c61b02edd89ba17aee719f0eac1cc4cbe756311f"
+    },
+    "hist_gradient_boosting": {
+      "seconds": 0.35666080500050157,
+      "train_rows": 18000,
+      "artifact_sha256": "2457c6672cd48823b65dbcccad52525e727763e3e22cf6647c5c8dfd872ea70c"
+    },
+    "random_forest_augmented": {
+      "seconds": 4.882194061001428,
+      "train_rows": 54000,
+      "artifact_sha256": "b74bb09eed6d9cbbf31b4883952ea487a731a692573f2d21bc478c30aba18492"
+    },
+    "random_forest_no_https": {
+      "seconds": 1.448825127001328,
+      "train_rows": 18000,
+      "artifact_sha256": "2fab23f529ed18ffdf9dca00dfd9ced0a7424cdb8cdab460b7dff9040a34523a"
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "matplotlib": "3.10.8",
+      "joblib": "1.5.3",
+      "tldextract": "5.3.0",
+      "streamlit": "1.50.0"
+    }
+  },
+  "samples_sha256": "fd65210fc084a7ebc7b707a2f07d889139ac71a71086bf2e2b5b0ceb4727e085",
+  "features_sha256": "0a58d1133cd8c869f42a68ec7fe70e1da8b7687245580b2caf3daa27970359ec"
+}

@@ -1,0 +1,63 @@
+{
+  "seed": 42,
+  "threshold": 0.5,
+  "hyperparameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced_subsample",
+    "criterion": "gini",
+    "max_depth": 18,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 150,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "baseline": "random_forest_augmented",
+  "candidate": "random_forest_root_augmented",
+  "train_original_rows": 18000,
+  "training_rows": 93775,
+  "training_label_counts": {
+    "0": 61884,
+    "1": 31891
+  },
+  "training_transform_counts": {
+    "original": 18000,
+    "query_padding": 18000,
+    "benign_path": 17990,
+    "root_slash": 13295,
+    "remove_www": 13430,
+    "remove_www_root_slash": 13060
+  },
+  "generation_audit": {
+    "conflicting_generated_rows_removed": 0,
+    "conflicting_urls": 0,
+    "duplicate_rows_removed": 23
+  },
+  "parent_sources_train_only": true,
+  "fit_seconds": 14.022543023000253,
+  "artifact_sha256": "8bc28a1cde0f1b10bc53347ee14be8c58b4584f3f4b33ed9b0f5d40be62269b1",
+  "samples_sha256": "fd65210fc084a7ebc7b707a2f07d889139ac71a71086bf2e2b5b0ceb4727e085",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "matplotlib": "3.10.8",
+      "joblib": "1.5.3",
+      "tldextract": "5.3.0",
+      "streamlit": "1.50.0"
+    }
+  }
+}

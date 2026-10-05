@@ -1,0 +1,23 @@
+{
+  "source": "https://archive.ics.uci.edu/static/public/967/phiusiil+phishing+url+dataset.zip",
+  "dataset": "PhiUSIIL Phishing URL (Website)",
+  "creators": [
+    "Arvind Prasad",
+    "Shalini Chandra"
+  ],
+  "year": 2024,
+  "license": "CC BY 4.0",
+  "dataset_page": "https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset",
+  "citation_doi": "10.1016/j.cose.2023.103545",
+  "retrieved_utc_date": "2026-10-03",
+  "zip_sha256": "0a639fd03aea6308c5b1c10c92aa23c2ce1505447a9137271865cd0badc9a59a",
+  "csv_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+  "source_labels": {
+    "0": "phishing",
+    "1": "legitimate"
+  },
+  "project_labels": {
+    "0": "benign",
+    "1": "phishing"
+  }
+}

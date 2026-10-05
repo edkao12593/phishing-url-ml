@@ -1,0 +1,117 @@
+{
+  "candidate": "random_forest_mixed",
+  "seed": 42,
+  "threshold": 0.5,
+  "hyperparameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced_subsample",
+    "criterion": "gini",
+    "max_depth": 18,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 150,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "input_sha256": "21093e2902e5441c86a6daf95e86e7c332046e477fdf109a579d7bd81e586d6c",
+  "samples_sha256": "fd65210fc084a7ebc7b707a2f07d889139ac71a71086bf2e2b5b0ceb4727e085",
+  "external_cleanup": {
+    "input_rows": 11430,
+    "included_rows": 10575,
+    "rejected_rows": 855,
+    "status_counts": {
+      "included": 10575,
+      "seen_domain": 845,
+      "invalid_url": 8,
+      "duplicate_url": 2
+    },
+    "conflicting_url_keys": 0,
+    "overlap_before_exclusion": {
+      "known_url_rows": 6,
+      "known_domain_rows_including_url_overlap": 845
+    },
+    "reference_rows": 30000,
+    "reference_groups": 26819,
+    "reference_splits": [
+      "test",
+      "train",
+      "validation"
+    ],
+    "remaining_domain_overlap": 0,
+    "label_counts": {
+      "benign": 5483,
+      "phishing": 5092
+    },
+    "filter_order": [
+      "invalid_label",
+      "invalid_url",
+      "conflicting_label",
+      "duplicate_url",
+      "seen_domain"
+    ],
+    "source_row_convention": "zero-based CSV data row (header excluded)",
+    "feature_input": "original URL text stripped at ends; no scheme rewriting",
+    "sampling": "none; evaluate all valid, unique, unseen-domain rows"
+  },
+  "external_split_rule": "StratifiedGroupKFold(5, seed=42): fold0 test, fold1 validation, rest train",
+  "external_splits": {
+    "test": {
+      "rows": 2116,
+      "benign": 1097,
+      "phishing": 1019,
+      "groups": 1370
+    },
+    "train": {
+      "rows": 6343,
+      "benign": 3289,
+      "phishing": 3054,
+      "groups": 4285
+    },
+    "validation": {
+      "rows": 2116,
+      "benign": 1097,
+      "phishing": 1019,
+      "groups": 1422
+    }
+  },
+  "original_train_rows": 18000,
+  "external_train_rows": 6343,
+  "training_rows": 24343,
+  "training_phishing": 10740,
+  "training_benign": 13603,
+  "domain_overlap_with_heldout": 0,
+  "hyperparameter_search": false,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "matplotlib": "3.10.8",
+      "joblib": "1.5.3",
+      "tldextract": "5.3.0",
+      "streamlit": "1.50.0"
+    }
+  },
+  "baseline_model_sha256": {
+    "logistic_regression.joblib": "477c2c30a904adab5f2ec149a768af68fb5f1740a0da541ca8d4c102ac760f66",
+    "random_forest_root_augmented.joblib": "8bc28a1cde0f1b10bc53347ee14be8c58b4584f3f4b33ed9b0f5d40be62269b1",
+    "random_forest.joblib": "8097422902cb79d1f06be9e3c61b02edd89ba17aee719f0eac1cc4cbe756311f",
+    "hist_gradient_boosting.joblib": "2457c6672cd48823b65dbcccad52525e727763e3e22cf6647c5c8dfd872ea70c",
+    "random_forest_no_https.joblib": "2fab23f529ed18ffdf9dca00dfd9ced0a7424cdb8cdab460b7dff9040a34523a",
+    "random_forest_augmented.joblib": "b74bb09eed6d9cbbf31b4883952ea487a731a692573f2d21bc478c30aba18492"
+  },
+  "fit_seconds": 2.6457683839998936,
+  "artifact_sha256": "229a257a4a832bb3be01acdb92853dae9a6ae981f8c039b649d64a8b2f9d49d0"
+}

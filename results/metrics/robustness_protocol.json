@@ -1,0 +1,24 @@
+{
+  "train_transforms": [
+    "query_padding",
+    "benign_path"
+  ],
+  "held_out_transforms": [
+    "fragment_padding",
+    "path_repeat",
+    "subdomain_prefix",
+    "percent_encode_path"
+  ],
+  "label_policy": "reuse_original",
+  "threshold": 0.5,
+  "paired_bootstrap": {
+    "unit": "registrable domain",
+    "repeats": 1000,
+    "seed": 42,
+    "quantity": "augmented RF F1 minus original RF F1",
+    "interval": "percentile",
+    "confidence_level": 0.95
+  },
+  "include_unchanged_urls": true,
+  "include_changed_only_metrics": true
+}

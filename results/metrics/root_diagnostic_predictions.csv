@@ -1,0 +1,9 @@
+﻿line,url,model,prediction,phishing_probability,threshold,status,error,url_length,hostname_length,path_depth,https
+1,google.com,random_forest_augmented,Phishing,0.9704436961,0.5,ok,,17,10,0,0
+2,https://google.com,random_forest_augmented,Phishing,0.931373428,0.5,ok,,18,10,0,1
+3,https://www.google.com,random_forest_augmented,Benign,0.02114756318,0.5,ok,,22,14,0,1
+4,https://www.google.com/,random_forest_augmented,Phishing,0.966960939,0.5,ok,,23,14,0,1
+1,google.com,random_forest_root_augmented,Phishing,0.9503748439,0.5,ok,,17,10,0,0
+2,https://google.com,random_forest_root_augmented,Benign,0.03475121075,0.5,ok,,18,10,0,1
+3,https://www.google.com,random_forest_root_augmented,Benign,0.04454546651,0.5,ok,,22,14,0,1
+4,https://www.google.com/,random_forest_root_augmented,Benign,0.05543578601,0.5,ok,,23,14,0,1

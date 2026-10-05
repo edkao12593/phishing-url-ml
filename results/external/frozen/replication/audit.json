@@ -1,0 +1,189 @@
+{
+  "input_rows": 11430,
+  "included_rows": 10575,
+  "rejected_rows": 855,
+  "status_counts": {
+    "included": 10575,
+    "seen_domain": 845,
+    "invalid_url": 8,
+    "duplicate_url": 2
+  },
+  "conflicting_url_keys": 0,
+  "overlap_before_exclusion": {
+    "known_url_rows": 6,
+    "known_domain_rows_including_url_overlap": 845
+  },
+  "reference_rows": 30000,
+  "reference_groups": 26819,
+  "reference_splits": [
+    "test",
+    "train",
+    "validation"
+  ],
+  "remaining_domain_overlap": 0,
+  "label_counts": {
+    "benign": 5483,
+    "phishing": 5092
+  },
+  "filter_order": [
+    "invalid_label",
+    "invalid_url",
+    "conflicting_label",
+    "duplicate_url",
+    "seen_domain"
+  ],
+  "source_row_convention": "zero-based CSV data row (header excluded)",
+  "feature_input": "original URL text stripped at ends; no scheme rewriting",
+  "sampling": "none; evaluate all valid, unique, unseen-domain rows",
+  "dataset": {
+    "dataset": "Web page phishing detection",
+    "creators": [
+      "Abdelhakim Hannousse",
+      "Salima Yahiouche"
+    ],
+    "dataset_page": "https://data.mendeley.com/datasets/c2gw7fy2j4/3",
+    "dataset_doi": "10.17632/c2gw7fy2j4.3",
+    "paper_doi": "10.1016/j.engappai.2021.104347",
+    "license": "CC BY 4.0",
+    "collection_period": "May 2020",
+    "publisher_reported_rows": 11430,
+    "source_labels": {
+      "legitimate": 0,
+      "phishing": 1
+    }
+  },
+  "executed_utc": "2026-10-04T16:15:57.868548+00:00",
+  "input_filename": "external.csv",
+  "input_sha256": "21093e2902e5441c86a6daf95e86e7c332046e477fdf109a579d7bd81e586d6c",
+  "reference_sha256": "7cce1852aac2895e21d8a6368083bf6e83532a31c4c21d7d51160e2d555e44bb",
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "matplotlib": "3.10.8",
+      "joblib": "1.5.3",
+      "tldextract": "5.3.0",
+      "streamlit": "1.50.0"
+    }
+  },
+  "requested_models": [
+    "random_forest",
+    "random_forest_augmented"
+  ],
+  "frozen_models": true,
+  "retraining": false,
+  "models": {
+    "random_forest": {
+      "sha256": "9b3c986dedf10ddd0020e3e6562441c8731920fd5b95e335028eb2be604e617a",
+      "threshold": 0.5,
+      "features": [
+        "url_length",
+        "hostname_length",
+        "path_length",
+        "query_length",
+        "fragment_length",
+        "digit_count",
+        "digit_ratio",
+        "letter_ratio",
+        "dot_count",
+        "hyphen_count",
+        "underscore_count",
+        "slash_count",
+        "at_count",
+        "percent_count",
+        "ampersand_count",
+        "equals_count",
+        "question_count",
+        "colon_count",
+        "special_ratio",
+        "subdomain_count",
+        "https",
+        "ip_host",
+        "has_port",
+        "has_userinfo",
+        "hostname_digit_ratio",
+        "hostname_hyphens",
+        "punycode",
+        "url_entropy",
+        "hostname_entropy",
+        "path_depth",
+        "max_path_component",
+        "max_host_component",
+        "query_parameter_count",
+        "encoded_octet_count",
+        "double_slash_in_path",
+        "long_component",
+        "token_login",
+        "token_verify",
+        "token_secure",
+        "token_account",
+        "token_update",
+        "token_bank",
+        "suspicious_token_count"
+      ],
+      "rows": 10575
+    },
+    "random_forest_augmented": {
+      "sha256": "f9c25f2e30aaae14480f3a1f10080cca5eb9dd4f92857e76503520f0d40080ef",
+      "threshold": 0.5,
+      "features": [
+        "url_length",
+        "hostname_length",
+        "path_length",
+        "query_length",
+        "fragment_length",
+        "digit_count",
+        "digit_ratio",
+        "letter_ratio",
+        "dot_count",
+        "hyphen_count",
+        "underscore_count",
+        "slash_count",
+        "at_count",
+        "percent_count",
+        "ampersand_count",
+        "equals_count",
+        "question_count",
+        "colon_count",
+        "special_ratio",
+        "subdomain_count",
+        "https",
+        "ip_host",
+        "has_port",
+        "has_userinfo",
+        "hostname_digit_ratio",
+        "hostname_hyphens",
+        "punycode",
+        "url_entropy",
+        "hostname_entropy",
+        "path_depth",
+        "max_path_component",
+        "max_host_component",
+        "query_parameter_count",
+        "encoded_octet_count",
+        "double_slash_in_path",
+        "long_component",
+        "token_login",
+        "token_verify",
+        "token_secure",
+        "token_account",
+        "token_update",
+        "token_bank",
+        "suspicious_token_count"
+      ],
+      "rows": 10575
+    }
+  },
+  "execution_status": "completed",
+  "evaluation_scope": "external, deduplicated, disjoint from all known domain groups",
+  "output_sha256": {
+    "confusion_matrices.png": "17aea63667e614c20fada9795a035e7eaccf5cdf765889a15f1d67ad8a6ff726",
+    "dataset_bias.csv": "f02602c67ab8c8365fcbb0292a8b412fc2f7a3d9e51a1bf0a2e65f6d360bfddf",
+    "excluded.csv.gz": "34c59e5cde8168d72587ec8b0109525bda75af47d1bc6d1a1fe3812021eb438c",
+    "model_comparison.csv": "5cb59627bd70a4df289d3e51ad79da0798f7205843c668b9d7952ec46abe4749",
+    "predictions.csv.gz": "3337822928bd739a76b2908614a80335744271c5486aa641ee4f861605be815f"
+  }
+}
